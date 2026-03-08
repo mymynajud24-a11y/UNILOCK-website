@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UniLock Hub Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>UniLock Hub Booking</h1>
+    <p>Stash and Dash – Quick, Easy, Secure</p>
+  </header>
+
+  <!-- Location Selection -->
+  <section id="locations">
+    <h2>Select Location</h2>
+    <div class="card" onclick="showLockers('DPT')">
+      <img src="dpt_building.jpg" alt="DPT Building">
+      <h3>DPT Building Ground Floor</h3>
+    </div>
+    <div class="card" onclick="showLockers('Gym')">
+      <img src="gym.jpg" alt="Gym">
+      <h3>Gym</h3>
+    </div>
+  </section>
+
+  <!-- Locker Grid -->
+  <section id="lockers">
+    <!-- Lockers will be generated here -->
+  </section>
+
+  <!-- Booking Form Modal -->
+  <div id="bookingForm" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeForm()">&times;</span>
+      <h2>Book Locker</h2>
+      <label for="studentId">Student ID:</label>
+      <input id="studentId" type="text"><br>
+
+      <label for="fullName">Full Name:</label>
+      <input id="fullName" type="text"><br>
+
+      <label for="date">Date:</label>
+      <input id="date" type="date"><br>
+
+      <label for="startTime">Start Time:</label>
+      <input id="startTime" type="time"><br>
+
+      <label for="endTime">End Time:</label>
+      <input id="endTime" type="time"><br>
+
+      <button onclick="confirmBooking()">Confirm Booking</button>
+    </div>
+  </div>
+
+  <!-- QR Code Panel -->
+  <section id="bookingInfo" style="display:none;">
+    <h2>Booking Information</h2>
+    <p id="infoText"></p>
+    <div id="qrcode"></div>
+    <button onclick="completeBooking()">Mark as Complete</button>
+    <button onclick="cancelBooking()">Cancel Booking</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
