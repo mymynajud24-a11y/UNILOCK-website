@@ -1,0 +1,51 @@
+/* Locker buttons */
+.locker-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.locker-btn:hover {
+  background: #219150;
+}
+
+.locker-btn.selected {
+  background: #2980b9;
+}
+
+.locker-btn:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Booking Info Panel */
+#bookingInfo {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* QR Code styling */
+#qrcode {
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px dashed #2c3e50;
+  display: inline-block;
+}
+
+/* Modal close button */
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #e74c3c;
+}
